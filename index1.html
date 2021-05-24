@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Store 3.0</title>
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+		
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div id="logo" class="sidebar-header">
+                    <h3 id="logoHeader">Store 3.0</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+					<li >
+						<a id="ml27">Menu lateral</a>
+					</li>
+                    <li >
+                        <a href="#homeSubmenu" id="ml1" data-toggle="collapse" aria-expanded="false"><i class="far fa-folder-open item-submenu"></i>Cadastros</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#" id="ml2"><i class="fas fa-store item-submenu fa-2x"></i>Filiais</a></li>
+                            <li><a href="#" id="ml3"><i class="fas fa-truck item-submenu fa-2x"></i>Fornecedores</a></li>
+                            <li><a href="#" id="ml4"><i class="fas fa-user-tag item-submenu fa-2x"></i>Clientes</a></li>
+                        </ul>
+                    </li>
+                    <li>	                       
+                        <a href="#pageSubmenu" id="ml5" data-toggle="collapse" aria-expanded="false"><i class="fas fa-tshirt item-submenu"></i>Produtos</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="#" id="ml6"><i class="fas fa-dollar-sign item-submenu-2x fa-2x"></i>Preços</a></li>
+                            <li><a href="#" id="ml7"><i class="fas fa-cubes item-submenu fa-2x"></i>Estoque</a></li>
+                            <li><a href="#" id="ml8"><i class="fas fa-project-diagram item-submenu-3x fa-1x"></i>Árvore mercadológica</a></li>
+                        </ul>
+                    </li>
+                    <li>	                       
+                        <a href="#orderSubmenu" id="ml9" data-toggle="collapse" aria-expanded="false"><i class="fas fa-paste item-submenu"></i> Pedidos</a>
+                        <ul class="collapse list-unstyled" id="orderSubmenu">
+                            <li><a href="#" id="ml10"><i class="far fa-clipboard item-submenu fa-2x"></i>Pedido de venda</a></li>
+                            <li><a href="#" id="ml11"><i class="far fa-file-alt item-submenu fa-2x"></i>Dav</a></li>
+                            <li><a href="#" id="ml12"><i class="fas fa-file-invoice-dollar item-submenu fa-2x"></i>Pré-venda</a></li>
+							<li><a href="#" id="ml13"><i class="fas fa-globe item-submenu fa-2x"></i>Oms</a></li>
+                        </ul>
+                    </li>
+					<li>	                       
+                        <a href="#paymentSubmenu" id="ml14" data-toggle="collapse" aria-expanded="false"><i class="fas fa-money-bill-alt item-submenu"></i>Tipos pagamentos</a>
+                        <ul class="collapse list-unstyled" id="paymentSubmenu">
+                            <li><a href="#" id="ml15"><i class="fas fa-hand-holding-usd item-submenu fa-2x"></i>Iti Itaú</a></li>
+							<li><a href="#" id="ml16"><i class="fas fa-hand-holding-usd item-submenu fa-2x"></i>Mercado Pago</a></li>
+							<li><a href="#" id="ml17"><i class="fas fa-hand-holding-usd item-submenu fa-2x"></i>PicPay</a></li>
+							<li><a href="#" id="ml18"><i class="fas fa-hand-holding-usd item-submenu fa-2x"></i>Pix</a></li>
+							<li><a href="#" id="ml19"><i class="fas fa-credit-card item-submenu fa-2x"></i>Débito</a></li>
+							<li><a href="#" id="ml20"><i class="far fa-credit-card item-submenu fa-2x"></i>Crédito</a></li>                            
+                        </ul>
+                    </li>
+					<li>	                       
+                        <a href="#applicationSubmenu" id="ml21" data-toggle="collapse" aria-expanded="false"><i class="fas fa-sitemap item-submenu"></i>Aplicações</a>
+                        <ul class="collapse list-unstyled" id="applicationSubmenu">
+                            <li><a href="#" id="ml22"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>K-Login</a></li>
+							<li><a href="#" id="ml23"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>K-Totem</a></li>
+							<li><a href="#" id="ml24"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Simulador financiamento</a></li>
+							<li><a href="#" id="ml25"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Consulta de campanhas</a></li>
+							<li><a href="#" id="ml26"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Cupom de recompra</a></li>
+							<li><a href="#" id="ml27"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Kallan card</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav id="store30_navbar" class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">						
+							<a id="sidebarCollapse" href="#">
+								<i class="fas fa-list item-submenu fa-2x" style="padding-top:15px !important;">								
+								</i>
+							</a>
+                        </div>
+                        <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">							
+							<ul class="nav navbar-nav navbar-right">																							
+								<li><a id="ms1" class="color-white" href="javascript:void(0);"><i class="fas fa-sitemap item-submenu fa-2x" data-toggle="tooltip" data-placement="bottom" title="Aplicações" onclick="OpenModalApplications()"></i></a></li>
+                                <li><a id="ms2" class="color-white" href="javascript:void(0);"><i class="fas fa-store item-submenu fa-2x" data-toggle="tooltip" data-placement="bottom" title="Consultar filial" onclick="OpenModal(1)" ></i></a></li>
+								<li><a id="ms3" class="color-white" href="javascript:void(0);"><i class="fas fa-tshirt item-submenu fa-2x" data-toggle="tooltip" data-placement="bottom" title="Consultar produto" onclick="OpenModal(2)" ></i></a></li>
+                                <li><a id="ms4" class="color-white" href="javascript:void(0);"><i class="fas fa-dollar-sign item-submenu-2x fa-2x"data-toggle="tooltip" data-placement="bottom" title="Consultar preço" onclick="OpenModal(3)" ></i></a></li>
+                                <li><a id="ms5" class="color-white" href="javascript:void(0);"><i class="fas fa-user-tag item-submenu fa-2x" data-toggle="tooltip" data-placement="bottom" title="Consultar cliente" onclick="OpenModal(4)" ></i></a></li>
+                                <li><a id="ms6" class="color-white" href="javascript:void(0);"><i class="fas fa-cart-plus item-submenu fa-2x" data-toggle="tooltip" data-placement="bottom" title="Nova venda" onclick="OpenModal(5)" ></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+				<!-- Colorir	 -->
+				<div class="row">
+					<div class="col-md-12 border-0">
+						<a id="colorConfig" href="javascript:void(0);" style="border: none !important; background-color:#37474f;" class="btn btn-primary pull-right"  onclick="AlterColor()"><i class="fas fa-cogs"></i></a>
+					</div>
+				</div>
+				<!-- -->
+				
+				
+				<div class="row">
+					
+					<div class="col-md-4">
+						<div class="card bkg-orange">
+						  <div class="card-title "> 
+							<div class="card-title-text"><i class="fas fa-tshirt item-submenu fa-2x"></i>Produtos mais vendidos</div>
+						  </div>					
+						  <div class="card-body">						
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+						  </div>			
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="card bkg-blue">
+						  <div class="card-title "> 
+							<div class="card-title-text"><i class="fas fa-cash-register item-submenu fa-2x"></i>Caixa</div>
+						  </div>					
+						  <div class="card-body">						
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+						  </div>			
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="card bkg-green">
+						  <div class="card-title "> 
+							<div class="card-title-text"><i class="fas fa-funnel-dollar item-submenu fa-2x"></i>Total das vendas</div>
+						  </div>					
+						  <div class="card-body">						
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+						  </div>			
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="card bkg-green">
+						  <div class="card-title "> 
+							<div class="card-title-text"><i class="fas fa-funnel-dollar item-submenu fa-2x"></i>Sangria de caixa</div>
+						  </div>					
+						  <div class="card-body">						
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+						  </div>			
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="card bkg-mustard">
+						  <div class="card-title "> 
+							<div class="card-title-text"><i class="fas fa-globe item-submenu fa-2x"></i>Pedidos Oms</div>
+						  </div>					
+						  <div class="card-body">						
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+						  </div>			
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="card bg-papaya">
+						  <div class="card-title "> 
+							<div class="card-title-text"><i class="far fa-credit-card item-submenu fa-2x"></i>Kallan card</div>
+						  </div>					
+						  <div class="card-body">						
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+						  </div>			
+						</div>
+					</div>
+					
+				</div>
+				
+                <h2>Template Store 3.0 - #1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="line"></div>
+
+                <h2>Lorem Ipsum Dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="line"></div>
+
+                <h2>Lorem Ipsum Dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="line"></div>
+
+                <h3>Lorem Ipsum Dolor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+		<div class="container-fluid">
+			<!-- The Modal -->
+			<div class="modal fade" id="myModal">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+		  
+						<!-- Modal Header -->
+						<div class="modal-header">
+							<h4 id="id-modal-title" class="modal-title">Modal Heading</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<!-- Modal body -->
+						<div class="modal-body">
+							<div class="row" style="margin-top:300px;">								        
+							</div>
+							<!-- Modal footer -->
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+							  <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar</button>          
+							</div>        
+						</div>
+					</div>
+				</div>  
+			</div>
+		</div>
+		
+		<div class="container-fluid">
+			<!-- The Modal -->
+			<div class="modal fade" id="myModalApplications">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+		  
+						<!-- Modal Header -->
+						<div class="modal-header">
+							<h4 id="id-modal-title-applications" class="modal-title">Aplicações</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+			
+						<!-- Modal body -->
+						<div class="modal-body">
+							<div class="row">
+					
+								<div class="col-md-4">
+									<div class="card bg-papaya">
+									  <div class="card-title "> 
+										<div class="card-title-text"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>K-Login</div>
+									  </div>					
+									  <div class="card-body">						
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+									  </div>			
+									</div>
+								</div>
+								
+								<div class="col-md-4">
+									<div class="card bg-papaya">
+									  <div class="card-title "> 
+										<div class="card-title-text"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>K-Totem</div>
+									  </div>					
+									  <div class="card-body">						
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+									  </div>			
+									</div>
+								</div>
+								
+								<div class="col-md-4">
+									<div class="card bg-papaya">
+									  <div class="card-title "> 
+										<div class="card-title-text"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Simulador financiamento</div>
+									  </div>					
+									  <div class="card-body">						
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+									  </div>			
+									</div>
+								</div>
+								
+								<div class="col-md-4">
+									<div class="card bg-papaya">
+									  <div class="card-title "> 
+										<div class="card-title-text"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Consulta de Campanhas</div>
+									  </div>					
+									  <div class="card-body">						
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+									  </div>			
+									</div>
+								</div>
+								
+								<div class="col-md-4">
+									<div class="card bg-papaya">
+									  <div class="card-title "> 
+										<div class="card-title-text"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Cupom de recompra</div>
+									  </div>					
+									  <div class="card-body">						
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+									  </div>			
+									</div>
+								</div>
+								
+								<div class="col-md-4">
+									<div class="card bg-papaya">
+									  <div class="card-title "> 
+										<div class="card-title-text"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Kallan card</div>
+									  </div>					
+									  <div class="card-body">						
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>							
+									  </div>			
+									</div>
+								</div>
+								
+							</div>
+					  
+							<!-- Modal footer -->
+							<div class="modal-footer">							  
+							  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+							  <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar</button>          
+							</div>        
+						</div>
+					</div>
+				</div>  
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<!-- The Modal -->
+			<div class="modal fade" id="myModalColor" style="margin-top:120px; background-color: rgba(0,0,0,.0001) !important;" data-backdrop="false" style="background-color: rgba(0, 0, 0, 0.5);">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+		  
+						<!-- Modal Header -->
+						<div class="modal-header">
+							<h4 id="id-modal-title" class="modal-title">Opção de cores</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+			
+						<!-- Modal body -->
+						<div class="modal-body">
+							<div class="row" style="margin-bottom: 10px;">
+								<div class="col-md-6">
+									Elemento: 
+									<select id="selectElement" class="form-select" style="width:200px;" >
+									  <option selected>Selecione</option>
+									  <option value="1">Menu superior</option>
+									  <option value="2">Menu lateral</option>
+									  <option value="3">Logo</option>
+									</select>																	
+								</div>
+								<div class="col-md-6">
+									Cor da fonte
+								</div>								
+							</div>							
+							<div class="row">								
+								<div class="col-md-6">																		
+									<button id="bg-indianred"  class="btn bg-indianred" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightcoral"  class="btn bg-lightcoral" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-salmon"  class="btn bg-salmon" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darksalmon"  class="btn bg-darksalmon" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightsalmon"  class="btn bg-lightsalmon" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-crimson"  class="btn bg-crimson" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-red"  class="btn bg-red" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-firebrick"  class="btn bg-firebrick" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkred"  class="btn bg-darkred" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-pink"  class="btn bg-pink" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightpink"  class="btn bg-lightpink" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-hotpink"  class="btn bg-hotpink" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-deeppink"  class="btn bg-deeppink" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumvioletred"  class="btn bg-mediumvioletred" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-palevioletred"  class="btn bg-palevioletred" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightsalmon"  class="btn bg-lightsalmon" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-coral"  class="btn bg-coral" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-tomato"  class="btn bg-tomato" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-orangered"  class="btn bg-orangered" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkorange"  class="btn bg-darkorange" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-orange"  class="btn bg-orange" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-gold"  class="btn bg-gold" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-yellow"  class="btn bg-yellow" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightyellow"  class="btn bg-lightyellow" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lemonchiffon"  class="btn bg-lemonchiffon" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightgoldenrodyellow"  class="btn bg-lightgoldenrodyellow" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-papayawhip"  class="btn bg-papayawhip" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-moccasin"  class="btn bg-moccasin" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-peachpuff"  class="btn bg-peachpuff" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-palegoldenrod"  class="btn bg-palegoldenrod" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-khaki"  class="btn bg-khaki" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkkhaki"  class="btn bg-darkkhaki" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lavender"  class="btn bg-lavender" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-thistle"  class="btn bg-thistle" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-plum"  class="btn bg-plum" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-violet"  class="btn bg-violet" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-orchid"  class="btn bg-orchid" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-fuchsia"  class="btn bg-fuchsia" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-magenta"  class="btn bg-magenta" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumorchid"  class="btn bg-mediumorchid" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumpurple"  class="btn bg-mediumpurple" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-rebeccapurple"  class="btn bg-rebeccapurple" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-blueviolet"  class="btn bg-blueviolet" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkviolet"  class="btn bg-darkviolet" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkorchid"  class="btn bg-darkorchid" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkmagenta"  class="btn bg-darkmagenta" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-purple"  class="btn bg-purple" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-indigo"  class="btn bg-indigo" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-slateblue"  class="btn bg-slateblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkslateblue"  class="btn bg-darkslateblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumslateblue"  class="btn bg-mediumslateblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-greenyellow"  class="btn bg-greenyellow" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-chartreuse"  class="btn bg-chartreuse" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lawngreen"  class="btn bg-lawngreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lime"  class="btn bg-lime" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-limegreen"  class="btn bg-limegreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-palegreen"  class="btn bg-palegreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightgreen"  class="btn bg-lightgreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumspringgreen"  class="btn bg-mediumspringgreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-springgreen"  class="btn bg-springgreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumseagreen"  class="btn bg-mediumseagreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-seagreen"  class="btn bg-seagreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-forestgreen"  class="btn bg-forestgreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-green"  class="btn bg-green" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkgreen"  class="btn bg-darkgreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-yellowgreen"  class="btn bg-yellowgreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-olivedrab"  class="btn bg-olivedrab" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-olive"  class="btn bg-olive" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkolivegreen"  class="btn bg-darkolivegreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumaquamarine"  class="btn bg-mediumaquamarine" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkseagreen"  class="btn bg-darkseagreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightseagreen"  class="btn bg-lightseagreen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkcyan"  class="btn bg-darkcyan" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-teal"  class="btn bg-teal" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-aqua"  class="btn bg-aqua" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-cyan"  class="btn bg-cyan" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightcyan"  class="btn bg-lightcyan" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-paleturquoise"  class="btn bg-paleturquoise" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-aquamarine"  class="btn bg-aquamarine" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-turquoise"  class="btn bg-turquoise" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumturquoise"  class="btn bg-mediumturquoise" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkturquoise"  class="btn bg-darkturquoise" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-cadetblue"  class="btn bg-cadetblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-steelblue"  class="btn bg-steelblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightsteelblue"  class="btn bg-lightsteelblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-powderblue"  class="btn bg-powderblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightblue"  class="btn bg-lightblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-skyblue"  class="btn bg-skyblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightskyblue"  class="btn bg-lightskyblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-deepskyblue"  class="btn bg-deepskyblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-dodgerblue"  class="btn bg-dodgerblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-cornflowerblue"  class="btn bg-cornflowerblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumslateblue"  class="btn bg-mediumslateblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-royalblue"  class="btn bg-royalblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-blue"  class="btn bg-blue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mediumblue"  class="btn bg-mediumblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkblue"  class="btn bg-darkblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-navy"  class="btn bg-navy" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-midnightblue"  class="btn bg-midnightblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-cornsilk"  class="btn bg-cornsilk" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-blanchedalmond"  class="btn bg-blanchedalmond" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-bisque"  class="btn bg-bisque" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-navajowhite"  class="btn bg-navajowhite" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-wheat"  class="btn bg-wheat" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-burlywood"  class="btn bg-burlywood" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-tan"  class="btn bg-tan" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-rosybrown"  class="btn bg-rosybrown" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-sandybrown"  class="btn bg-sandybrown" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-goldenrod"  class="btn bg-goldenrod" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkgoldenrod"  class="btn bg-darkgoldenrod" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-peru"  class="btn bg-peru" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-chocolate"  class="btn bg-chocolate" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-saddlebrown"  class="btn bg-saddlebrown" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-sienna"  class="btn bg-sienna" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-brown"  class="btn bg-brown" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-maroon"  class="btn bg-maroon" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-white"  class="btn bg-white" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-snow"  class="btn bg-snow" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-honeydew"  class="btn bg-honeydew" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mintcream"  class="btn bg-mintcream" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-azure"  class="btn bg-azure" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-aliceblue"  class="btn bg-aliceblue" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-ghostwhite"  class="btn bg-ghostwhite" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-whitesmoke"  class="btn bg-whitesmoke" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-seashell"  class="btn bg-seashell" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-beige"  class="btn bg-beige" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-oldlace"  class="btn bg-oldlace" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-floralwhite"  class="btn bg-floralwhite" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-ivory"  class="btn bg-ivory" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-antiquewhite"  class="btn bg-antiquewhite" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-linen"  class="btn bg-linen" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lavenderblush"  class="btn bg-lavenderblush" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-mistyrose"  class="btn bg-mistyrose" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-gainsboro"  class="btn bg-gainsboro" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightgray"  class="btn bg-lightgray" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-silver"  class="btn bg-silver" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkgray"  class="btn bg-darkgray" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-gray"  class="btn bg-gray" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-dimgray"  class="btn bg-dimgray" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-lightslategray"  class="btn bg-lightslategray" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-slategray"  class="btn bg-slategray" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-darkslategray"  class="btn bg-darkslategray" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-black"  class="btn bg-black" onClick="ChangeBackgroundColor()" ></button>
+									<button id="bg-default"  class="btn bg-default" onClick="ChangeBackgroundColor()" ></button>
+								</div>
+								
+								<div class="col-md-6">																		
+									<button id="color-indianred"  class="btn bg-indianred" onClick="ChangeColor()" ></button>
+									<button id="color-lightcoral"  class="btn bg-lightcoral" onClick="ChangeColor()" ></button>
+									<button id="color-salmon"  class="btn bg-salmon" onClick="ChangeColor()" ></button>
+									<button id="color-darksalmon"  class="btn bg-darksalmon" onClick="ChangeColor()" ></button>
+									<button id="color-lightsalmon"  class="btn bg-lightsalmon" onClick="ChangeColor()" ></button>
+									<button id="color-crimson"  class="btn bg-crimson" onClick="ChangeColor()" ></button>
+									<button id="color-red"  class="btn bg-red" onClick="ChangeColor()" ></button>
+									<button id="color-firebrick"  class="btn bg-firebrick" onClick="ChangeColor()" ></button>
+									<button id="color-darkred"  class="btn bg-darkred" onClick="ChangeColor()" ></button>
+									<button id="color-pink"  class="btn bg-pink" onClick="ChangeColor()" ></button>
+									<button id="color-lightpink"  class="btn bg-lightpink" onClick="ChangeColor()" ></button>
+									<button id="color-hotpink"  class="btn bg-hotpink" onClick="ChangeColor()" ></button>
+									<button id="color-deeppink"  class="btn bg-deeppink" onClick="ChangeColor()" ></button>
+									<button id="color-mediumvioletred"  class="btn bg-mediumvioletred" onClick="ChangeColor()" ></button>
+									<button id="color-palevioletred"  class="btn bg-palevioletred" onClick="ChangeColor()" ></button>
+									<button id="color-lightsalmon"  class="btn bg-lightsalmon" onClick="ChangeColor()" ></button>
+									<button id="color-coral"  class="btn bg-coral" onClick="ChangeColor()" ></button>
+									<button id="color-tomato"  class="btn bg-tomato" onClick="ChangeColor()" ></button>
+									<button id="color-orangered"  class="btn bg-orangered" onClick="ChangeColor()" ></button>
+									<button id="color-darkorange"  class="btn bg-darkorange" onClick="ChangeColor()" ></button>
+									<button id="color-orange"  class="btn bg-orange" onClick="ChangeColor()" ></button>
+									<button id="color-gold"  class="btn bg-gold" onClick="ChangeColor()" ></button>
+									<button id="color-yellow"  class="btn bg-yellow" onClick="ChangeColor()" ></button>
+									<button id="color-lightyellow"  class="btn bg-lightyellow" onClick="ChangeColor()" ></button>
+									<button id="color-lemonchiffon"  class="btn bg-lemonchiffon" onClick="ChangeColor()" ></button>
+									<button id="color-lightgoldenrodyellow"  class="btn bg-lightgoldenrodyellow" onClick="ChangeColor()" ></button>
+									<button id="color-papayawhip"  class="btn bg-papayawhip" onClick="ChangeColor()" ></button>
+									<button id="color-moccasin"  class="btn bg-moccasin" onClick="ChangeColor()" ></button>
+									<button id="color-peachpuff"  class="btn bg-peachpuff" onClick="ChangeColor()" ></button>
+									<button id="color-palegoldenrod"  class="btn bg-palegoldenrod" onClick="ChangeColor()" ></button>
+									<button id="color-khaki"  class="btn bg-khaki" onClick="ChangeColor()" ></button>
+									<button id="color-darkkhaki"  class="btn bg-darkkhaki" onClick="ChangeColor()" ></button>
+									<button id="color-lavender"  class="btn bg-lavender" onClick="ChangeColor()" ></button>
+									<button id="color-thistle"  class="btn bg-thistle" onClick="ChangeColor()" ></button>
+									<button id="color-plum"  class="btn bg-plum" onClick="ChangeColor()" ></button>
+									<button id="color-violet"  class="btn bg-violet" onClick="ChangeColor()" ></button>
+									<button id="color-orchid"  class="btn bg-orchid" onClick="ChangeColor()" ></button>
+									<button id="color-fuchsia"  class="btn bg-fuchsia" onClick="ChangeColor()" ></button>
+									<button id="color-magenta"  class="btn bg-magenta" onClick="ChangeColor()" ></button>
+									<button id="color-mediumorchid"  class="btn bg-mediumorchid" onClick="ChangeColor()" ></button>
+									<button id="color-mediumpurple"  class="btn bg-mediumpurple" onClick="ChangeColor()" ></button>
+									<button id="color-rebeccapurple"  class="btn bg-rebeccapurple" onClick="ChangeColor()" ></button>
+									<button id="color-blueviolet"  class="btn bg-blueviolet" onClick="ChangeColor()" ></button>
+									<button id="color-darkviolet"  class="btn bg-darkviolet" onClick="ChangeColor()" ></button>
+									<button id="color-darkorchid"  class="btn bg-darkorchid" onClick="ChangeColor()" ></button>
+									<button id="color-darkmagenta"  class="btn bg-darkmagenta" onClick="ChangeColor()" ></button>
+									<button id="color-purple"  class="btn bg-purple" onClick="ChangeColor()" ></button>
+									<button id="color-indigo"  class="btn bg-indigo" onClick="ChangeColor()" ></button>
+									<button id="color-slateblue"  class="btn bg-slateblue" onClick="ChangeColor()" ></button>
+									<button id="color-darkslateblue"  class="btn bg-darkslateblue" onClick="ChangeColor()" ></button>
+									<button id="color-mediumslateblue"  class="btn bg-mediumslateblue" onClick="ChangeColor()" ></button>
+									<button id="color-greenyellow"  class="btn bg-greenyellow" onClick="ChangeColor()" ></button>
+									<button id="color-chartreuse"  class="btn bg-chartreuse" onClick="ChangeColor()" ></button>
+									<button id="color-lawngreen"  class="btn bg-lawngreen" onClick="ChangeColor()" ></button>
+									<button id="color-lime"  class="btn bg-lime" onClick="ChangeColor()" ></button>
+									<button id="color-limegreen"  class="btn bg-limegreen" onClick="ChangeColor()" ></button>
+									<button id="color-palegreen"  class="btn bg-palegreen" onClick="ChangeColor()" ></button>
+									<button id="color-lightgreen"  class="btn bg-lightgreen" onClick="ChangeColor()" ></button>
+									<button id="color-mediumspringgreen"  class="btn bg-mediumspringgreen" onClick="ChangeColor()" ></button>
+									<button id="color-springgreen"  class="btn bg-springgreen" onClick="ChangeColor()" ></button>
+									<button id="color-mediumseagreen"  class="btn bg-mediumseagreen" onClick="ChangeColor()" ></button>
+									<button id="color-seagreen"  class="btn bg-seagreen" onClick="ChangeColor()" ></button>
+									<button id="color-forestgreen"  class="btn bg-forestgreen" onClick="ChangeColor()" ></button>
+									<button id="color-green"  class="btn bg-green" onClick="ChangeColor()" ></button>
+									<button id="color-darkgreen"  class="btn bg-darkgreen" onClick="ChangeColor()" ></button>
+									<button id="color-yellowgreen"  class="btn bg-yellowgreen" onClick="ChangeColor()" ></button>
+									<button id="color-olivedrab"  class="btn bg-olivedrab" onClick="ChangeColor()" ></button>
+									<button id="color-olive"  class="btn bg-olive" onClick="ChangeColor()" ></button>
+									<button id="color-darkolivegreen"  class="btn bg-darkolivegreen" onClick="ChangeColor()" ></button>
+									<button id="color-mediumaquamarine"  class="btn bg-mediumaquamarine" onClick="ChangeColor()" ></button>
+									<button id="color-darkseagreen"  class="btn bg-darkseagreen" onClick="ChangeColor()" ></button>
+									<button id="color-lightseagreen"  class="btn bg-lightseagreen" onClick="ChangeColor()" ></button>
+									<button id="color-darkcyan"  class="btn bg-darkcyan" onClick="ChangeColor()" ></button>
+									<button id="color-teal"  class="btn bg-teal" onClick="ChangeColor()" ></button>
+									<button id="color-aqua"  class="btn bg-aqua" onClick="ChangeColor()" ></button>
+									<button id="color-cyan"  class="btn bg-cyan" onClick="ChangeColor()" ></button>
+									<button id="color-lightcyan"  class="btn bg-lightcyan" onClick="ChangeColor()" ></button>
+									<button id="color-paleturquoise"  class="btn bg-paleturquoise" onClick="ChangeColor()" ></button>
+									<button id="color-aquamarine"  class="btn bg-aquamarine" onClick="ChangeColor()" ></button>
+									<button id="color-turquoise"  class="btn bg-turquoise" onClick="ChangeColor()" ></button>
+									<button id="color-mediumturquoise"  class="btn bg-mediumturquoise" onClick="ChangeColor()" ></button>
+									<button id="color-darkturquoise"  class="btn bg-darkturquoise" onClick="ChangeColor()" ></button>
+									<button id="color-cadetblue"  class="btn bg-cadetblue" onClick="ChangeColor()" ></button>
+									<button id="color-steelblue"  class="btn bg-steelblue" onClick="ChangeColor()" ></button>
+									<button id="color-lightsteelblue"  class="btn bg-lightsteelblue" onClick="ChangeColor()" ></button>
+									<button id="color-powderblue"  class="btn bg-powderblue" onClick="ChangeColor()" ></button>
+									<button id="color-lightblue"  class="btn bg-lightblue" onClick="ChangeColor()" ></button>
+									<button id="color-skyblue"  class="btn bg-skyblue" onClick="ChangeColor()" ></button>
+									<button id="color-lightskyblue"  class="btn bg-lightskyblue" onClick="ChangeColor()" ></button>
+									<button id="color-deepskyblue"  class="btn bg-deepskyblue" onClick="ChangeColor()" ></button>
+									<button id="color-dodgerblue"  class="btn bg-dodgerblue" onClick="ChangeColor()" ></button>
+									<button id="color-cornflowerblue"  class="btn bg-cornflowerblue" onClick="ChangeColor()" ></button>
+									<button id="color-mediumslateblue"  class="btn bg-mediumslateblue" onClick="ChangeColor()" ></button>
+									<button id="color-royalblue"  class="btn bg-royalblue" onClick="ChangeColor()" ></button>
+									<button id="color-blue"  class="btn bg-blue" onClick="ChangeColor()" ></button>
+									<button id="color-mediumblue"  class="btn bg-mediumblue" onClick="ChangeColor()" ></button>
+									<button id="color-darkblue"  class="btn bg-darkblue" onClick="ChangeColor()" ></button>
+									<button id="color-navy"  class="btn bg-navy" onClick="ChangeColor()" ></button>
+									<button id="color-midnightblue"  class="btn bg-midnightblue" onClick="ChangeColor()" ></button>
+									<button id="color-cornsilk"  class="btn bg-cornsilk" onClick="ChangeColor()" ></button>
+									<button id="color-blanchedalmond"  class="btn bg-blanchedalmond" onClick="ChangeColor()" ></button>
+									<button id="color-bisque"  class="btn bg-bisque" onClick="ChangeColor()" ></button>
+									<button id="color-navajowhite"  class="btn bg-navajowhite" onClick="ChangeColor()" ></button>
+									<button id="color-wheat"  class="btn bg-wheat" onClick="ChangeColor()" ></button>
+									<button id="color-burlywood"  class="btn bg-burlywood" onClick="ChangeColor()" ></button>
+									<button id="color-tan"  class="btn bg-tan" onClick="ChangeColor()" ></button>
+									<button id="color-rosybrown"  class="btn bg-rosybrown" onClick="ChangeColor()" ></button>
+									<button id="color-sandybrown"  class="btn bg-sandybrown" onClick="ChangeColor()" ></button>
+									<button id="color-goldenrod"  class="btn bg-goldenrod" onClick="ChangeColor()" ></button>
+									<button id="color-darkgoldenrod"  class="btn bg-darkgoldenrod" onClick="ChangeColor()" ></button>
+									<button id="color-peru"  class="btn bg-peru" onClick="ChangeColor()" ></button>
+									<button id="color-chocolate"  class="btn bg-chocolate" onClick="ChangeColor()" ></button>
+									<button id="color-saddlebrown"  class="btn bg-saddlebrown" onClick="ChangeColor()" ></button>
+									<button id="color-sienna"  class="btn bg-sienna" onClick="ChangeColor()" ></button>
+									<button id="color-brown"  class="btn bg-brown" onClick="ChangeColor()" ></button>
+									<button id="color-maroon"  class="btn bg-maroon" onClick="ChangeColor()" ></button>
+									<button id="color-white"  class="btn bg-white" onClick="ChangeColor()" ></button>
+									<button id="color-snow"  class="btn bg-snow" onClick="ChangeColor()" ></button>
+									<button id="color-honeydew"  class="btn bg-honeydew" onClick="ChangeColor()" ></button>
+									<button id="color-mintcream"  class="btn bg-mintcream" onClick="ChangeColor()" ></button>
+									<button id="color-azure"  class="btn bg-azure" onClick="ChangeColor()" ></button>
+									<button id="color-aliceblue"  class="btn bg-aliceblue" onClick="ChangeColor()" ></button>
+									<button id="color-ghostwhite"  class="btn bg-ghostwhite" onClick="ChangeColor()" ></button>
+									<button id="color-whitesmoke"  class="btn bg-whitesmoke" onClick="ChangeColor()" ></button>
+									<button id="color-seashell"  class="btn bg-seashell" onClick="ChangeColor()" ></button>
+									<button id="color-beige"  class="btn bg-beige" onClick="ChangeColor()" ></button>
+									<button id="color-oldlace"  class="btn bg-oldlace" onClick="ChangeColor()" ></button>
+									<button id="color-floralwhite"  class="btn bg-floralwhite" onClick="ChangeColor()" ></button>
+									<button id="color-ivory"  class="btn bg-ivory" onClick="ChangeColor()" ></button>
+									<button id="color-antiquewhite"  class="btn bg-antiquewhite" onClick="ChangeColor()" ></button>
+									<button id="color-linen"  class="btn bg-linen" onClick="ChangeColor()" ></button>
+									<button id="color-lavenderblush"  class="btn bg-lavenderblush" onClick="ChangeColor()" ></button>
+									<button id="color-mistyrose"  class="btn bg-mistyrose" onClick="ChangeColor()" ></button>
+									<button id="color-gainsboro"  class="btn bg-gainsboro" onClick="ChangeColor()" ></button>
+									<button id="color-lightgray"  class="btn bg-lightgray" onClick="ChangeColor()" ></button>
+									<button id="color-silver"  class="btn bg-silver" onClick="ChangeColor()" ></button>
+									<button id="color-darkgray"  class="btn bg-darkgray" onClick="ChangeColor()" ></button>
+									<button id="color-gray"  class="btn bg-gray" onClick="ChangeColor()" ></button>
+									<button id="color-dimgray"  class="btn bg-dimgray" onClick="ChangeColor()" ></button>
+									<button id="color-lightslategray"  class="btn bg-lightslategray" onClick="ChangeColor()" ></button>
+									<button id="color-slategray"  class="btn bg-slategray" onClick="ChangeColor()" ></button>
+									<button id="color-darkslategray"  class="btn bg-darkslategray" onClick="ChangeColor()" ></button>
+									<button id="color-black"  class="btn bg-black" onClick="ChangeColor()" ></button>
+									<button id="color-default"  class="btn bg-default" onClick="ChangeColor()" ></button>
+								</div>
+							</div>					  
+							<!-- Modal footer -->
+							<div class="modal-footer">							  
+							  <button type="button" class="btn btn-primary" onClick="ResetColor()">Resetar</button>							  
+							</div>        
+						</div>
+					</div>
+				</div>  
+			</div>
+		</div>
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+		 
+		 <script type="text/javascript">
+			
+			function OpenModal(value)
+			{
+				headerModal = "";
+				
+				switch (value) {
+				  case 1:
+					headerModal = "Consulta de Filial"
+					break;
+				  case 2:
+					headerModal = "Consulta de Produto"
+					break;
+				  case 3:
+					headerModal = "Consulta de Preço"
+					break;
+				  case 4:
+					headerModal = "Consulta de Cliente"
+					break;
+				  case 5:
+					headerModal = "Nova Venda"
+					break;
+				}
+								
+				document.getElementById("id-modal-title").innerHTML = headerModal;
+				$("#myModal").modal('show');				
+			}
+			
+			function OpenModalApplications()
+			{	
+				$("#myModalApplications").modal('show');				
+			}
+			
+			function AlterColor()
+			{	
+				$("#myModalColor").modal('show');				
+			}
+						
+			function ChangeColor(e)
+			{
+				e = e || window.event;
+				e = e.target || e.srcElement;
+				if (e.nodeName === 'BUTTON') {	
+
+					selectedElement = document.getElementById("selectElement").value;
+					switch (selectedElement) {
+					  case "1":						
+						for (var i = 0; i <= 5 ; i++) {
+							elementChangeName = "ms" + (i + 1);														
+							element = document.getElementById(elementChangeName);
+							element.classList.remove(...element.classList);						
+							element.classList.add(e.id);							
+						}		
+						
+						elementChangeName = "sidebarCollapse";
+						element = document.getElementById(elementChangeName);
+						element.classList.remove(...element.classList);						
+						element.classList.add(e.id);
+						break;
+					  
+					  case "2":						
+						for (var i = 0; i <= 28 ; i++) {
+							elementChangeName = "ml" + (i + 1);														
+							element = document.getElementById(elementChangeName);
+							element.classList.remove(...element.classList);						
+							element.classList.add(e.id);							
+						}	
+						break;
+					  case "3":
+						elementChangeName = "logoHeader";
+						element = document.getElementById(elementChangeName);						
+						element.classList.remove(...element.classList);										
+						element.classList.add(e.id);						
+						break;					  
+					  default:
+						elementChangeName = "";
+					}					
+				}
+			}
+			
+			function ChangeBackgroundColor(e)
+			{
+				e = e || window.event;
+				e = e.target || e.srcElement;
+				if (e.nodeName === 'BUTTON') {	
+
+					selectedElement = document.getElementById("selectElement").value;
+					switch (selectedElement) {
+					  case "1":
+						elementChangeName = "store30_navbar";
+						element = document.getElementById(elementChangeName);
+						element.classList.remove(...element.classList);
+						element.classList.add("navbar");
+						element.classList.add("navbar-default");
+						element.classList.add(e.id);
+						break;
+					  case "2":
+						elementChangeName = "sidebar";
+						element = document.getElementById(elementChangeName);						
+						element.classList.remove(...element.classList);						
+						element.classList.add(e.id);
+						break;
+					  case "3":
+						elementChangeName = "logo";
+						element = document.getElementById(elementChangeName);						
+						element.classList.remove(...element.classList);
+						element.classList.add("sidebar-header");						
+						element.classList.add(e.id);						
+						break;					  
+					  default:
+						elementChangeName = "";
+					}					
+				}
+			}
+			
+			function ResetColor()
+			{
+				document.getElementById("bg-default").click();
+				document.getElementById("color-default").click();							
+			}
+         </script>		 
+    </body>
+</html>
