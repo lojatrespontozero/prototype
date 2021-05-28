@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
         <title>Store 3.0</title>
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- Our Custom CSS -->
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="style.css">
-		
+		<!-- Custom JS -->
+		<script type="text/javascript" src="javascript.js"></script>		
 		<!-- Icons -->
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
-    <body id="background">
+    <body id="background" style="background-color: #f5f5f5 !important;">
         <div class="wrapper">
             <!-- Sidebar Holder -->
             <nav id="sidebar">
@@ -72,24 +72,17 @@
 							<li><a href="#" id="ml26"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Cupom de recompra</a></li>
 							<li><a href="#" id="ml27"><i class="fas fa-satellite-dish item-submenu fa-2x"></i>Kallan card</a></li>
                         </ul>
-                    </li>
-			
-			
-			<!-- diagrama -->
-			<li>	                       
+                    </li>					
+					<li>	                       
                         <a href="#diagramSubmenu" id="ml28" data-toggle="collapse" aria-expanded="false"><i class="fas fa-sitemap item-submenu"></i>Diagrama de rede</a>
                         <ul class="collapse list-unstyled" id="diagramSubmenu">
                             <li><a href="diagrama_rede.html" id="ml29"><i class="fas fa-sitemap item-submenu fa-2x"></i>Diagrama</a></li>							
                         </ul>
-                    </li>
-			<!-- diagrama -->
-			
+                    </li>					
                 </ul>
             </nav>
-
             <!-- Page Content Holder -->
             <div id="content">
-
                 <nav id="store30_navbar" class="navbar navbar-default">
                     <div class="container-fluid">
                         <div class="navbar-header">						
@@ -109,19 +102,13 @@
                             </ul>
                         </div>
                     </div>
-                </nav>
-
-				<!-- Colorir	 -->
+                </nav>				
 				<div class="row">
 					<div class="col-md-12 border-0">
-						<a id="colorConfig" href="javascript:void(0);" style="border: none !important; background-color:#37474f;" class="btn btn-primary pull-right"  onclick="AlterColor()"><i class="fas fa-cogs"></i></a>
+						<a id="colorConfig" href="javascript:void(0);" style="border: none !important; background-color:#37474f;" class="btn btn-primary pull-right" onclick="AlterColor()" ><i class="fas fa-cogs"></i></a>
 					</div>
 				</div>
-				<!-- -->
-				
-				
-				<div class="row">
-					
+				<div class="row">					
 					<div class="col-md-4">
 						<div class="card bkg-orange">
 						  <div class="card-title "> 
@@ -317,9 +304,7 @@
 									  </div>			
 									</div>
 								</div>
-								
 							</div>
-					  
 							<!-- Modal footer -->
 							<div class="modal-footer">							  							  
 							  <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>          
@@ -664,146 +649,17 @@
 			</div>
 		</div>
         <!-- jQuery CDN -->
-         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-         <!-- Bootstrap Js CDN -->
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-         <script type="text/javascript">
-             $(document).ready(function () {
-                 $('#sidebarCollapse').on('click', function () {
-                     $('#sidebar').toggleClass('active');
-                 });
-             });
-         </script>
+		 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		 <!-- Bootstrap Js CDN -->
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		 
 		 <script type="text/javascript">
-			
-			function OpenModal(value)
-			{
-				headerModal = "";
-				
-				switch (value) {
-				  case 1:
-					headerModal = "Consulta de Filial"
-					break;
-				  case 2:
-					headerModal = "Consulta de Produto"
-					break;
-				  case 3:
-					headerModal = "Consulta de Preço"
-					break;
-				  case 4:
-					headerModal = "Consulta de Cliente"
-					break;
-				  case 5:
-					headerModal = "Nova Venda"
-					break;
-				}
-								
-				document.getElementById("id-modal-title").innerHTML = headerModal;
-				$("#myModal").modal('show');				
-			}
-			
-			function OpenModalApplications()
-			{	
-				$("#myModalApplications").modal('show');				
-			}
-			
-			function AlterColor()
-			{	
-				$("#myModalColor").modal('show');				
-			}
-						
-			function ChangeColor(e)
-			{
-				e = e || window.event;
-				e = e.target || e.srcElement;
-				if (e.nodeName === 'BUTTON') {	
-
-					selectedElement = document.getElementById("selectElement").value;
-					switch (selectedElement) {
-					  case "1":						
-						for (var i = 0; i <= 5 ; i++) {
-							elementChangeName = "ms" + (i + 1);														
-							element = document.getElementById(elementChangeName);
-							element.classList.remove(...element.classList);						
-							element.classList.add(e.id);							
-						}		
-						
-						elementChangeName = "sidebarCollapse";
-						element = document.getElementById(elementChangeName);
-						element.classList.remove(...element.classList);						
-						element.classList.add(e.id);
-						break;
-					  
-					  case "2":						
-						for (var i = 0; i <= 30 ; i++) {
-							elementChangeName = "ml" + (i + 1);														
-							element = document.getElementById(elementChangeName);
-							element.classList.remove(...element.classList);						
-							element.classList.add(e.id);							
-						}	
-						break;
-					  case "3":
-						elementChangeName = "logoHeader";
-						element = document.getElementById(elementChangeName);						
-						element.classList.remove(...element.classList);										
-						element.classList.add(e.id);						
-						break;					  
-					  default:
-						elementChangeName = "";
-					}					
-				}
-			}
-			
-			function ChangeBackgroundColor(e)
-			{
-				e = e || window.event;
-				e = e.target || e.srcElement;
-				if (e.nodeName === 'BUTTON') {	
-
-					selectedElement = document.getElementById("selectElement").value;
-					switch (selectedElement) {
-					  case "1":
-						elementChangeName = "store30_navbar";
-						element = document.getElementById(elementChangeName);
-						element.classList.remove(...element.classList);
-						element.classList.add("navbar");
-						element.classList.add("navbar-default");
-						element.classList.add(e.id);
-						break;
-					  case "2":
-						elementChangeName = "sidebar";
-						element = document.getElementById(elementChangeName);						
-						element.classList.remove(...element.classList);						
-						element.classList.add(e.id);
-						break;
-					  case "3":
-						elementChangeName = "logo";
-						element = document.getElementById(elementChangeName);						
-						element.classList.remove(...element.classList);
-						element.classList.add("sidebar-header");						
-						element.classList.add(e.id);						
-						break;		
-					  case "4":
-						elementChangeName = "background";
-						element = document.getElementById(elementChangeName);						
-						element.classList.remove(...element.classList);									
-						element.classList.add(e.id);						
-						break;	
-
-						
-					  default:
-						elementChangeName = "";
-					}					
-				}
-			}
-			
-			function ResetColor()
-			{
-				document.getElementById("bg-default").click();
-				document.getElementById("color-default").click();							
-			}
-         </script>		 
+			$(document).ready(function () {
+				 $('#sidebarCollapse').on('click', function () {
+					 $('#sidebar').toggleClass('active');
+				 });
+			 });
+		 </script>
+		 
     </body>
 </html>
