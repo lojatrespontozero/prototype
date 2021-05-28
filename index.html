@@ -14,7 +14,7 @@
 		<!-- Icons -->
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
-    <body>
+    <body id="background">
         <div class="wrapper">
             <!-- Sidebar Holder -->
             <nav id="sidebar">
@@ -352,6 +352,7 @@
 									  <option value="1">Menu superior</option>
 									  <option value="2">Menu lateral</option>
 									  <option value="3">Logo</option>
+									  <option value="4">Background</option>
 									</select>																	
 								</div>
 								<div class="col-md-6">
@@ -783,7 +784,15 @@
 						element.classList.remove(...element.classList);
 						element.classList.add("sidebar-header");						
 						element.classList.add(e.id);						
-						break;					  
+						break;		
+					  case "4":
+						elementChangeName = "background";
+						element = document.getElementById(elementChangeName);						
+						element.classList.remove(...element.classList);									
+						element.classList.add(e.id);						
+						break;	
+
+						
 					  default:
 						elementChangeName = "";
 					}					
